@@ -1,0 +1,32 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+	<title>HTML with Javascript</title>
+	<script type="application/javascript">
+		var t = 0;
+		var z = setInterval(function(){
+			console.log(t++, document.readyState);
+			if (document.readyState == "complete") {
+				clearInterval(z);
+				z = undefined; t = 0;
+			}
+		}, 1);
+		function loadApp () {
+			var script = ui.new({
+				el : 'script',
+				attr : { src : 'app.js' }
+			});
+			document.getElementsByTagName('body')[0].appendChild(script);
+		}
+	</script>
+</head>
+<!--<body>
+	<script type="application/javascript" src="ui.js"></script>
+	<script type="application/javascript" src="app.js"></script>
+</body>-->
+
+<body onload="loadApp()">
+	<script type="application/javascript" src="../ui.min.js"></script>
+</body>
+
+</html>
