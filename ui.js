@@ -12,7 +12,7 @@
 	var UI = function UI() {
 		this.obj = new Object();
 	};
-	UI.prototype.new = function (obj) {
+	UI.prototype.new = function (param, htmlTarget) {
 		var me = this;
 
 		me.element = undefined;
