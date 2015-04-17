@@ -43,7 +43,7 @@
 		var exception = ['css', 'text', 'style', 'html', 'el'];
 
 		if (obj.constructor === Object && (Object.keys(obj).length)) {
-			obj.id = obj.id || ('ui' + (Math.random() * 10000).toString(32));
+			obj.id = obj.id || ('ui' + (Math.random() * 10000).toString(32)).replace('.', '');
 			Object.keys(obj).forEach(function (key, i) {
 				if (obj[key].constructor == String) {
 					if (exception.indexOf(key) === -1) {
