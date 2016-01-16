@@ -11,7 +11,7 @@ May 3rd, 2015.
 MIT
 
 #### Version
-0.0.1
+0.0.2
 
 #### Example
 Can be found [here](https://github.com/rappresent/ui.js/tree/master/example)
